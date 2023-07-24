@@ -1,22 +1,22 @@
-#include <stdio.h> //biblioteca de comunicaÁ„o com o usu·rio
-#include <stdlib.h> //biblioteca de alocaÁ„o de espaÁo em memÛria  //salva o arquivo como banco de dados
-#include <locale.h> //biblioteca de alocaÁ„o de texto por regi„o "colocar os acentos"
-#include <string.h> //biblioteca respons·vel por cuidar das string
+#include <stdio.h> //biblioteca de comunica√ß√£o com o usu√°rio
+#include <stdlib.h> //biblioteca de aloca√ß√£o de espa√ßo em mem√≥ria  //salva o arquivo como banco de dados
+#include <locale.h> //biblioteca de aloca√ß√£o de texto por regi√£o "colocar os acentos"
+#include <string.h> //biblioteca respons√°vel por cuidar das string
 
-int registro()//FunÁ„o respons·vel por cadastrar os usu·rios no sistema
+int registro()//Fun√ß√£o respons√°vel por cadastrar os usu√°rios no sistema
 {
-	//inicio criaÁ„o das vari·veis
+	//inicio cria√ß√£o das vari√°veis
 	char arquivo[40];
 	char cpf[40];
 	char nome[40];
 	char sobrenome[40];
 	char cargo[40];
-	//final da criaÁ„o de vari·veis
+	//final da cria√ß√£o de vari√°veis
 	
-	printf("Digite o CPF a ser cadastrado:"); //coletando informaÁ„o do usu·rio
+	printf("Digite o CPF a ser cadastrado:"); //coletando informa√ß√£o do usu√°rio
 	scanf("%s", cpf); //%s refere-se a string
 	
-	strcpy(arquivo, cpf); //Respons·vel por copiar os valores das string
+	strcpy(arquivo, cpf); //Respons√°vel por copiar os valores das string
 	
 	FILE *file; //cria o arquivo
 	file = fopen(arquivo,"w"); //cria o arquivo 
@@ -74,12 +74,12 @@ int consulta()
 	
 	if(file ==NULL)
 	{
-		printf("N„o foi possivel localizar o cpf.\n");
+		printf("N√£o foi possivel localizar o cpf.\n");
 	}
 	
 	while(fgets(conteudo,200, file) !=NULL)
 	{
-		printf("\nEssas s„o as informaÁıes do usu·rio:");
+		printf("\nEssas s√£o as informa√ß√µes do usu√°rio:");
 		printf("%s", conteudo);
 		printf("\n,\n");
 	}
@@ -100,7 +100,7 @@ int deletar()
 	
 	if(file == NULL)
 	{
-		printf("Usu·rio n„o se encontra cadastrado no sistema.\n");
+		printf("Usu√°rio n√£o se encontra cadastrado no sistema.\n");
 		system("pause");
 	}
 
@@ -120,22 +120,22 @@ int main ()
 		
 		setlocale(LC_ALL, "Portuguese"); //Selecionando o idioma
 	
-		printf("###CartÛrio da EBAC ###\n\n"); //Inicio
-		printf("Escolha a opÁ„o desejada do menu:\n\n"); //Inicio menu
+		printf("###Cart√≥rio da EBAC ###\n\n"); //Inicio
+		printf("Escolha a op√ß√£o desejada do menu:\n\n"); //Inicio menu
 		printf("\t1 - Registrar nomes\n");
 		printf("\t2 - Consultar nomes\n");
 		printf("\t3 - Deletar nomes\n"); 
 		printf("\t4 - Sair do sistema\n\n");
-		printf("OpÁ„o:");//fim do menu
+		printf("Op√ß√£o:");//fim do menu
 	
-		scanf("%d", &opcao); //armazenando a escolha do usu·rio
+		scanf("%d", &opcao); //armazenando a escolha do usu√°rio
 	
-		system("cls"); //Respons·vel por limpar a tela
+		system("cls"); //Respons√°vel por limpar a tela
 		
-		switch(opcao) //comando de seleÁ„o
+		switch(opcao) //comando de sele√ß√£o
 		{
 			case 1:
-			registro(); //chamada de funÁıes
+			registro(); //chamada de fun√ß√µes
 			break;
 				
 			case 2:
@@ -152,7 +152,7 @@ int main ()
 			break;
 				
 			default:
-			printf("Essa opÁ„o n„o È valida\n");
+			printf("Essa op√ß√£o n√£o √© valida\n");
 			system("pause");				
 			break;
 		}
