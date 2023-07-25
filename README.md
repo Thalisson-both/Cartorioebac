@@ -1,2 +1,2 @@
 # Cartorioebac
-Projeto do curto TI da ebac
+Projeto do curso TI da ebac
